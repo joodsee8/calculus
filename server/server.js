@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import rateLimit from 'express-rate-limit';
 
-const { GEMINI_API_KEY, GEMINI_MODEL = 'gemini-3.5-flash-lite', ALLOWED_ORIGINS = '', PORT = 3000 } = process.env;
+const { GEMINI_API_KEY, GEMINI_MODEL = 'gemini-3.5-flash-lite', ALLOWED_ORIGINS = 'https://edith-quest.vercel.app', PORT = 3000 } = process.env;
 const origins = ALLOWED_ORIGINS.split(',').map(s => s.trim().replace(/\/$/, '')).filter(Boolean);
 
 const app = express();
