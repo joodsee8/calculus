@@ -1,0 +1,25 @@
+:root{--bg:#0f1f2a;--pn:#16303d;--ln:#7bd88f;--cr:#f2e8cf;--wm:#f4a259;--bl:#5b8def;--rd:#e5707e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--cr);font:16px/1.55 Georgia,serif;background-image:linear-gradient(#ffffff08 1px,transparent 1px);background-size:100% 4px}
+h1,h2,h3,.px,nav button,.btn{font-family:'Press Start 2P',monospace}
+h1{font-size:clamp(16px,4vw,28px);color:var(--ln);margin:.3em 0;line-height:1.4}h2{font-size:15px;color:var(--wm);line-height:1.5}h3{font-size:12px;color:var(--ln)}
+nav{display:flex;flex-wrap:wrap;gap:6px;padding:8px;background:#0a151c;border-bottom:4px solid var(--ln);position:sticky;top:0;z-index:5}
+nav button{font-size:9px;padding:8px;background:var(--pn);color:var(--cr);border:2px solid var(--ln);cursor:pointer}
+nav button:focus-visible,.btn:focus-visible,input:focus-visible{outline:3px solid var(--wm)}
+#app{display:grid;grid-template-columns:1fr 290px;gap:14px;padding:14px;max-width:1100px;margin:auto}
+@media(max-width:800px){#app{grid-template-columns:1fr}#ang{order:-1}}
+.pn{background:var(--pn);border:4px solid var(--cr);box-shadow:4px 4px 0 #000;padding:14px;margin-bottom:14px}
+.btn{font-size:10px;padding:10px 12px;margin:4px 4px 4px 0;background:var(--ln);color:#0a151c;border:0;box-shadow:3px 3px 0 #000;cursor:pointer}
+.btn.alt{background:var(--wm)}.btn.gh{background:var(--pn);color:var(--cr);border:2px solid var(--cr)}.btn:disabled{opacity:.4;cursor:not-allowed}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.bar{height:12px;background:#000;border:2px solid var(--cr)}.bar i{display:block;height:100%;background:var(--ln)}
+input[type=text]{width:100%;padding:10px;font:16px monospace;background:#0a151c;color:var(--cr);border:3px solid var(--bl)}
+.opt{display:block;padding:8px;margin:6px 0;border:2px solid var(--bl);cursor:pointer}.opt:has(input:checked){background:#5b8def44}
+.ok{border-left:6px solid var(--ln);padding-left:10px}.bad{border-left:6px solid var(--rd);padding-left:10px}
+.bubble{background:var(--cr);color:#1a2a33;padding:10px;border:3px solid #000;position:relative;font-size:15px}
+#sp{width:150px;height:225px;image-rendering:pixelated;display:block;margin:0 auto 8px}
+.lock{opacity:.45}.tag{font:10px 'Press Start 2P';color:var(--wm)}
+body.na *{animation:none!important;transition:none!important}
+.pop{animation:pop .3s}@keyframes pop{from{transform:scale(.97);opacity:.4}}
+table{width:100%;border-collapse:collapse}td,th{border-bottom:1px solid #fff3;padding:5px;text-align:left;font-size:14px}
+mjx-container{color:inherit}
